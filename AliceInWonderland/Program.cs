@@ -10,7 +10,14 @@ namespace AliceInWonderland
             string userInput = Console.ReadLine();
             userInput.ToLower();
             bool foundWord = WordFinder.Search(userInput);
-            Console.WriteLine(foundWord);
+            if (foundWord == true)
+            {
+                Console.WriteLine(WordIndex.Index(userInput));
+                Console.WriteLine(SentenceModifier.Modify(userInput));
+            } else
+            {
+                Console.WriteLine(foundWord);
+            }
         }
     }
 }
